@@ -4,6 +4,7 @@
 resource "aws_security_group" "deepseek_sg" {
   name        = "deepseek-sg"
   description = "Allow HTTP, HTTPS, and SSH traffic"
+  vpc_id      = aws_vpc.vpc.id
 
   ingress {
     from_port   = 80
