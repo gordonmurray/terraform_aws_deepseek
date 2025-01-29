@@ -4,6 +4,8 @@ A terraform project to create an EC2 instance running Deepseek R1
 
 Using the approach from this guide: https://community.aws/content/2sEuHQlpyIFSwCkzmx585JckSgN/deploying-deepseek-r1-14b-on-amazon-ec2
 
+![Ollama AI](images/ollama.png)
+
 
 ## Estimated cost
 
