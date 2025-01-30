@@ -10,34 +10,26 @@ Using the approach from this guide: https://community.aws/content/2sEuHQlpyIFSwC
 ## Estimated cost
 
 ```
- Name                                                       Monthly Qty  Unit              Monthly Cost
+ Name                                                    Monthly Qty  Unit   Monthly Cost
 
  aws_instance.deepseek_r1
- ├─ Instance usage (Linux/UNIX, on-demand, g4dn.xlarge)             730  hours                  $428.51
+ ├─ Instance usage (Linux/UNIX, on-demand, g4dn.xlarge)          730  hours       $428.51
  └─ root_block_device
-    └─ Storage (general purpose SSD, gp3)                           100  GB                       $8.80
+    └─ Storage (general purpose SSD, gp3)                        100  GB            $8.80
 
- aws_nat_gateway.main
- ├─ NAT gateway                                                     730  hours                   $35.04
- └─ Data processed                                       Monthly cost depends on usage: $0.048 per GB
-
- aws_lb.deepseek_alb
- ├─ Application load balancer                                       730  hours                   $18.40
- └─ Load balancer capacity units                         Monthly cost depends on usage: $5.84 per LCU
-
- OVERALL TOTAL                                                                                 $490.75
+ OVERALL TOTAL                                                                   $437.31
 
 *Usage costs can be estimated by updating Infracost Cloud settings, see docs for other options.
 
 ──────────────────────────────────
-31 cloud resources were detected:
-∙ 3 were estimated
-∙ 28 were free
+16 cloud resources were detected:
+∙ 1 was estimated
+∙ 15 were free
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
 ┃ Project                                            ┃ Baseline cost ┃ Usage cost* ┃ Total cost ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━┫
-┃ main                                               ┃          $491 ┃           - ┃       $491 ┃
+┃ main                                               ┃          $437 ┃           - ┃       $437 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━┛
 ```
 
@@ -46,12 +38,12 @@ Using the approach from this guide: https://community.aws/content/2sEuHQlpyIFSwC
 ```
   results
   ──────────────────────────────────────────
-  passed               13
+  passed               5
   ignored              0
-  critical             5
-  high                 4
-  medium               0
-  low                  4
+  critical             3
+  high                 2
+  medium               1
+  low                  3
 
-  13 passed, 13 potential problem(s) detected.
+  5 passed, 9 potential problem(s) detected.
   ```
