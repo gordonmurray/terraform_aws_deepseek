@@ -38,3 +38,7 @@ resource "aws_instance" "deepseek_r1" {
   user_data = base64encode("./scripts/setup_ollama.sh")
 
 }
+
+resource "aws_eip" "public_ip" {
+  instance = aws_instance.deepseek_r1.id
+}
