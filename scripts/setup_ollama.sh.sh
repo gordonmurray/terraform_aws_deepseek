@@ -11,7 +11,7 @@ mkdir /home/ssm-user/tmp
 chmod -R 777 tmp
 cd /home/ssm-user
 export TMPDIR=/home/ssm-user/tmp
-CC=/usr/bin/gcc ~/NVIDIA-Linux-x86_64*.run --tmpdir=$TMPDIR
+CC=/usr/bin/gcc ~/NVIDIA-Linux-x86_64*.run --tmpdir=$TMPDIR -s
 sudo touch /etc/modprobe.d/nvidia.conf
 echo "options nvidia NVreg_EnableGpuFirmware=0" | sudo tee --append /etc/modprobe.d/nvidia.conf
 
