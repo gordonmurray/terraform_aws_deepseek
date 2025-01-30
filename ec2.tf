@@ -34,6 +34,6 @@ resource "aws_instance" "deepseek_r1" {
   }
 
   # User data to install NVIDIA drivers, Docker and Ollama
-  user_data = base64encode(file("${path.module}/scripts/setup_ollama.sh"))
+  user_data = base64encode("./scripts/setup_ollama.sh")
 
 }

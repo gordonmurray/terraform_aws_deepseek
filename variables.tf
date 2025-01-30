@@ -10,12 +10,6 @@ variable "default_tag" {
   default     = "terraform_aws_deepseek"
 }
 
-variable "private_subnet_cidrs" {
-  description = "List of CIDR blocks for the private subnets"
-  type        = list(string)
-  default     = ["10.0.10.0/24", "10.0.11.0/24", "10.0.12.0/24"]
-}
-
 variable "public_subnet_cidrs" {
   description = "List of CIDR blocks for the public subnets"
   type        = list(string)
