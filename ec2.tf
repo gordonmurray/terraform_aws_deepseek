@@ -25,6 +25,7 @@ resource "aws_instance" "deepseek_r1" {
   root_block_device {
     volume_size = 100
     volume_type = "gp3"
+    encrypted   = true
   }
 
   vpc_security_group_ids = [aws_security_group.deepseek_sg.id]
