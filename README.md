@@ -38,8 +38,8 @@ Edit the `variables.tf` file or create a terraform.tfvars file to set the follow
 Example `terraform.tfvars:`
 
 ```
-aws_region     = "us-west-2"
-instance_type  = "g5.4xlarge"
+aws_region     = "eu-west-1"
+instance_type  = "g4dn.xlarge"
 ```
 
 ### 4. Deploy the Infrastructure
@@ -61,7 +61,7 @@ terraform destroy
 ```
 
 
-### Screenshot of the rsulting UI
+### Screenshot of the resulting UI
 
 ![Ollama AI](images/ollama.png)
 
