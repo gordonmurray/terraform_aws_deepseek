@@ -14,7 +14,6 @@ data "aws_ami" "amazon_linux_2" {
   }
 }
 
-
 # Create EC2 Instance
 resource "aws_instance" "deepseek_r1" {
   ami                  = data.aws_ami.amazon_linux_2.id

@@ -36,9 +36,8 @@ sudo docker run -d --runtime=nvidia -v ollama:/root/.ollama -p 11434:11434 --nam
 # Pull the DeepSeek model
 docker exec -it ollama ollama pull deepseek-r1:14b
 
-# Run Ollama Web UI with explicit Ollama server URL
+# Run Ollama Web UI
 docker run -d -p 3000:8080 \
-  -e OLLAMA_API_BASE_URL=http://host.docker.internal:11434 \
   --add-host=host.docker.internal:host-gateway \
   -v ollama-webui:/app/backend/data \
   --name ollama-webui \

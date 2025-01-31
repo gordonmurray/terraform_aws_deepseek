@@ -97,12 +97,12 @@ terraform destroy
 ```
   results
   ──────────────────────────────────────────
-  passed               5
+  passed               7
   ignored              0
-  critical             3
-  high                 2
+  critical             2
+  high                 0
   medium               1
-  low                  3
+  low                  2
 
-  5 passed, 9 potential problem(s) detected.
+  7 passed, 5 potential problem(s) detected.
   ```

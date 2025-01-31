@@ -3,7 +3,7 @@
 # Create Security Group for EC2 Instance
 resource "aws_security_group" "deepseek_sg" {
   name        = "deepseek-sg"
-  description = "Allow HTTP, HTTPS, and SSH traffic"
+  description = "Allow HTTP traffic"
   vpc_id      = aws_vpc.vpc.id
 
   ingress {
@@ -14,9 +14,9 @@ resource "aws_security_group" "deepseek_sg" {
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
