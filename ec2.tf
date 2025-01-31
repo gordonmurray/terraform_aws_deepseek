@@ -30,10 +30,16 @@ resource "aws_instance" "deepseek_r1" {
 
   vpc_security_group_ids = [aws_security_group.deepseek_sg.id]
 
+  # Metadata options to enforce IMDSv2
+  metadata_options {
+    http_tokens                 = "required" # Requires IMDSv2
+    http_endpoint               = "enabled"  # Optional: Enable or disable IMDS
+    http_put_response_hop_limit = 2          # if the hop limit is 1, the IMDSv2 response does not return because going to the container is considered an additional network hop.
+  }
+
   tags = {
     Name = "deepseek-r1"
   }
-
 
   #instance_market_options {
   #  market_type = "spot"
