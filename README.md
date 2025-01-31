@@ -74,21 +74,21 @@ terraform destroy
  aws_instance.deepseek_r1
  ├─ Instance usage (Linux/UNIX, on-demand, g4dn.xlarge)          730  hours       $428.51
  └─ root_block_device
-    └─ Storage (general purpose SSD, gp3)                        100  GB            $8.80
+    └─ Storage (general purpose SSD, gp3)                         50  GB            $4.40
 
- OVERALL TOTAL                                                                   $437.31
+ OVERALL TOTAL                                                                   $432.91
 
 *Usage costs can be estimated by updating Infracost Cloud settings, see docs for other options.
 
 ──────────────────────────────────
-16 cloud resources were detected:
+17 cloud resources were detected:
 ∙ 1 was estimated
-∙ 15 were free
+∙ 16 were free
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
 ┃ Project                                            ┃ Baseline cost ┃ Usage cost* ┃ Total cost ┃
 ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━┫
-┃ main                                               ┃          $437 ┃           - ┃       $437 ┃
+┃ main                                               ┃          $433 ┃           - ┃       $433 ┃
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━┛
 ```
 

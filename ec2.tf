@@ -22,7 +22,7 @@ resource "aws_instance" "deepseek_r1" {
   subnet_id            = aws_subnet.public[0].id
 
   root_block_device {
-    volume_size = 100
+    volume_size = 50
     volume_type = "gp3"
     encrypted   = true
   }
