@@ -34,8 +34,17 @@ resource "aws_instance" "deepseek_r1" {
     Name = "deepseek-r1"
   }
 
+
+  #instance_market_options {
+  #  market_type = "spot"
+  #  spot_options {
+  #    instance_interruption_behavior = "terminate" # Optional, defaults to terminate
+  #    max_price                      = "0.3"       # Maximum price you are willing to pay
+  #  }
+  #}
+
   # User data to install NVIDIA drivers, Docker and Ollama
-  user_data = base64encode("./scripts/setup_ollama.sh")
+  user_data = base64encode(file("./scripts/setup_ollama.sh"))
 
 }
 
