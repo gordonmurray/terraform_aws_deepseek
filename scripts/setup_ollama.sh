@@ -34,7 +34,8 @@ sudo systemctl restart docker
 sudo docker run -d --runtime=nvidia -v ollama:/root/.ollama -p 11434:11434 --name ollama --restart always ollama/ollama
 
 # Pull the DeepSeek model
-docker exec -it ollama ollama pull deepseek-r1:14b
+#docker exec -it ollama ollama pull deepseek-r1:14b
+docker exec -it ollama ollama pull deepseek-r1:32b
 
 # Run Ollama Web UI
 docker run -d -p 3000:8080 \
